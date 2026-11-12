@@ -29,7 +29,7 @@ const DADOS = {
     {
       papel: "Líder",
       nome: "Beatriz Carneiro",
-      descricao: "Tem 19 anos e faz parte da Primeira Igreja Batista desde 2024. Lidera a Liora com o desejo de que cada jovem encontre aqui um lugar para pertencer e crescer na fé.",
+      descricao: "Tem 19 anos e faz parte da Primeira Igreja Batista desde 2020. Lidera a Liora com o desejo de que cada jovem encontre aqui um lugar para pertencer e crescer na fé.",
       foto: "assets/img/lider-01.webp",
       posicao: "50% 35%"
     },
