@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Célula Liora</title>
+  <meta name="description" content="Liora é uma célula cristã de jovens mulheres. Conheça a comunidade, veja o próximo encontro e venha fazer parte.">
+  <meta name="theme-color" content="#F2E4CA">
+  <link rel="icon" href="assets/marca/favicon.png">
+
+  <!-- Prévia do link ao compartilhar (WhatsApp, Instagram, etc.) -->
+  <link rel="canonical" href="https://analujuvino.github.io/celula-liora/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Célula Liora">
+  <meta property="og:title" content="Célula Liora">
+  <meta property="og:description" content="Luz que reflete o Criador. Uma família para pertencer: toda quinta, às 19h30.">
+  <meta property="og:url" content="https://analujuvino.github.io/celula-liora/">
+  <meta property="og:image" content="https://analujuvino.github.io/celula-liora/assets/img/previa.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A Célula Liora reunida, abraçada e sorrindo, em frente ao painel da célula">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Questrial (Célula e textos de apoio) e Cormorant Garamond (títulos editoriais) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ NAVEGAÇÃO (pílula flutuante) ============ -->
+  <header class="topo" id="topo">
+    <div class="topo__pilula">
+      <a class="topo__marca" href="#abertura" aria-label="Liora Célula — início">
+        <img src="assets/marca/logo-claro.png" alt="Liora célula" width="96" height="37">
+      </a>
+      <nav class="menu" id="menu" aria-label="Seções do site">
+        <a href="#por-dentro">Conhecer</a>
+        <a href="#essencia">Essência</a>
+        <a href="#lideranca">Liderança</a>
+        <a href="#mural">Mural</a>
+        <a href="#proximo">Próximo encontro</a>
+        <a href="#memorias">Por dentro</a>
+        <a href="#primeira-visita">Nossa dinâmica</a>
+        <a href="#conecte-se" class="menu__so-cel">Conecte-se</a>
+      </nav>
+      <a class="topo__cta" href="#conecte-se">Conecte-se</a>
+      <button class="topo__botao" aria-expanded="false" aria-controls="menu">
+        <span class="sr">Menu</span><span class="topo__linhas" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ 1. ABERTURA (capa com foto em tela cheia) ============ -->
+    <section class="abertura painel" id="abertura" aria-label="Abertura">
+      <div class="abertura__foto">
+        <img src="assets/img/fotoabertura.jpeg" alt="A célula Liora reunida, abraçada e sorrindo, em frente ao painel com a lamparina" fetchpriority="high">
+      </div>
+      <div class="abertura__veu" aria-hidden="true"></div>
+      <div class="grao" aria-hidden="true"></div>
+
+      <p class="abertura__topo">Pertencimento<span aria-hidden="true">/</span>Fé<span aria-hidden="true">/</span>Transformação</p>
+
+      <div class="abertura__texto">
+        <h1 class="abertura__nome"><span class="sr">Célula Liora</span></h1>
+        <p class="abertura__frase"><span>Luz que <em>reflete</em></span> <span>o Criador.</span></p>
+      </div>
+
+      <div class="abertura__lado">
+        <p>Uma família para pertencer.</p>
+      </div>
+      <!-- Só no celular: avisa que a foto pode ser arrastada -->
+      <span class="abertura__dica" aria-hidden="true">‹ deslize ›</span>
+    </section>
+
+    <!-- ============ 2. FRONTSTAGE ============ -->
+    <section class="secao" id="por-dentro">
+      <div class="secao__cabeca revelar">
+        <p class="selo selo--grande">Frontstage</p>
+        <p class="secao__sub">Um espaço para ser você, sem filtros.</p>
+      </div>
+      <!-- Mosaico: fotos de "galeria" em js/dados.js -->
+      <div class="mosaico" id="mosaico"></div>
+    </section>
+
+    <!-- ============ 3. ESSÊNCIA ============ -->
+    <section class="painel painel--areia essencia" id="essencia">
+      <div class="essencia__topo">
+        <div class="essencia__titulo revelar">
+          <p class="selo">Nossa essência</p>
+          <h2 class="titulo">luz que <em>reflete</em><br>o Criador.</h2>
+        </div>
+        <div class="essencia__texto revelar">
+          <img class="essencia__lamp" src="assets/marca/lamparina-azul.webp" alt="" width="450" height="904" aria-hidden="true">
+          <p class="essencia__destaque">A lamparina não cria a luz. Ela a carrega, a protege e a leva para onde está escuro.</p>
+          <p>É assim que enxergamos a Liora: jovens que recebem a luz de Cristo e a refletem.</p>
+        </div>
+      </div>
+
+      <ol class="pilares">
+        <li class="pilar revelar">
+          <span class="pilar__num">#01</span>
+          <h3>Pertencimento</h3>
+          <p>Um lugar para chegar como está e ser acolhida como família.</p>
+        </li>
+        <li class="pilar revelar">
+          <span class="pilar__num">#02</span>
+          <h3>Fé</h3>
+          <p>Crescer na Palavra e caminhar com Deus, juntas.</p>
+        </li>
+        <li class="pilar revelar">
+          <span class="pilar__num">#03</span>
+          <h3>Transformação</h3>
+          <p>A luz de Cristo muda a gente, e a gente a reflete por onde passa.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ LIDERANÇA ============
+         Os dois perfis (líder e líder em treinamento) ficam em js/dados.js, em "lideranca". -->
+    <section class="secao" id="lideranca">
+      <div class="secao__cabeca revelar">
+        <p class="selo">Liderança</p>
+        <h2 class="titulo titulo--medio">quem <em>caminha</em> com você</h2>
+      </div>
+      <div class="lideres" id="lideres-lista"></div>
+    </section>
+
+    <!-- ============ 4. MURAL VIVO ============
+         Vídeos de "videos" em js/dados.js (arquivos .mp4 em assets/video/) -->
+    <section class="secao" id="mural">
+      <div class="secao__cabeca revelar">
+        <p class="selo">Mural vivo</p>
+        <h2 class="titulo titulo--medio"><span class="nome-proprio">Liora</span> em <em>vídeo</em></h2>
+      </div>
+      <div class="videos__trilho" id="videos-lista"></div>
+    </section>
+
+    <!-- ============ 5. PRÓXIMO ENCONTRO ============ -->
+    <section class="painel painel--azul proximo" id="proximo">
+      <div class="proximo__luz" aria-hidden="true"></div>
+      <div class="grao" aria-hidden="true"></div>
+      <div class="proximo__cabeca revelar">
+        <p class="selo selo--claro">Nosso próximo encontro</p>
+        <h2 class="titulo titulo--medio titulo--claro">Nos vemos às <em>Quintas-feiras</em></h2>
+      </div>
+      <div class="proximo__cartao revelar" id="proximo-cartao" aria-live="polite"></div>
+    </section>
+
+    <!-- ============ 6. BACKSTAGE ============
+         Fotos de "backstage" em js/dados.js -->
+    <section class="secao" id="memorias">
+      <div class="secao__cabeca revelar">
+        <p class="selo selo--medio">Backstage</p>
+      </div>
+      <div class="galeria" id="galeria"></div>
+    </section>
+
+    <!-- ============ 7. NOSSA DINÂMICA ============ -->
+    <section class="painel painel--areia visita" id="primeira-visita">
+      <div class="visita__cabeca revelar">
+        <p class="selo">Para quem está chegando</p>
+        <h2 class="titulo">nossa <em>dinâmica</em></h2>
+        <p class="secao__sub">como acontece?</p>
+      </div>
+
+      <div class="duvidas revelar">
+        <details>
+          <summary>Como funciona um encontro?</summary>
+          <p>Tem momento de oração, quebra-gelo pra todo mundo se soltar, louvor, devocional, estudo da Palavra e, aquele tempo de conversa, de comunhão e de comida.</p>
+        </details>
+        <details>
+          <summary>Preciso conhecer alguém antes?</summary>
+          <p>Nada disso! Chegou, já é da casa. Alguém da Liora vai te receber e te apresentar pras meninas.</p>
+        </details>
+        <details>
+          <summary>Posso levar uma amiga?</summary>
+          <p>Pode e deve! A gente ama gente nova. A Liora é feita de convites.</p>
+        </details>
+        <details>
+          <summary>O que eu preciso levar?</summary>
+          <p>Só você. Se tiver Bíblia, traz. Se não tiver, relaxa, a gente divide.</p>
+        </details>
+        <details>
+          <summary>Como faço para participar?</summary>
+          <p>Manda um oi no Instagram ou no WhatsApp que a gente te passa tudo.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ 8. CONECTE-SE ============ -->
+    <section class="painel conecte" id="conecte-se">
+      <div class="conecte__fundo" aria-hidden="true"></div>
+      <div class="conecte__luz" aria-hidden="true"></div>
+      <div class="grao" aria-hidden="true"></div>
+      
+      <div class="conecte__caixa revelar">
+        <p class="selo">Conecte-se</p>
+        <h2 class="titulo titulo--medio">spoiler: há um lugar à mesa para <em>você</em></h2>
+        <p>Fale com a gente!</p>
+        <div class="conecte__botoes">
+          <a class="icone-social" id="link-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Falar com a Liora no WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+          </a>
+          <a class="icone-social" id="link-instagram" href="#" target="_blank" rel="noopener" aria-label="Seguir a Liora no Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.86 5.86 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.13A5.86 5.86 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0Zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="rodape painel painel--noite">
+    <div class="rodape__topo">
+      <img src="assets/marca/logo-claro.png" alt="Liora célula" width="260" height="100" loading="lazy">
+    </div>
+    <div class="faixa" id="faixa" aria-hidden="true"></div>
+    <div class="rodape__base">
+      <a class="rodape__topo-link" href="#abertura"><span aria-hidden="true">↑</span> voltar ao topo</a>
+      <small>Luz que reflete o Criador.</small>
+    </div>
+  </footer>
+
+  <!-- Visualização ampliada das fotos -->
+  <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+    <button class="lightbox__fechar" aria-label="Fechar">×</button>
+    <button class="lightbox__nav lightbox__nav--ant" aria-label="Anterior">‹</button>
+    <figure>
+      <div class="lightbox__imagem" id="lightbox-imagem"></div>
+      <figcaption id="lightbox-legenda"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--prox" aria-label="Próxima">›</button>
+  </dialog>
+
+  <script src="js/dados.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

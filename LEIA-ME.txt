@@ -1,0 +1,18 @@
+SITE LIORA CÉLULA — como usar
+
+Abrir: dê dois cliques em index.html (ou use o Live Server do VS Code).
+
+Atualizar conteúdo: tudo fica em js/dados.js
+  - contato: links do WhatsApp e do Instagram
+  - encontro: dia, hora, local e frase do encontro semanal (a data é calculada sozinha)
+  - especiais: encontros fora da quinta (opcional)
+  - lideranca: os dois perfis da liderança
+  - videos: vídeos do "Mural vivo" (arquivos .mp4 em assets/video/)
+  - galeria: as 6 fotos do Frontstage (imagens em assets/img/)
+  - rodape: as 5 fotos da faixa no fim da página
+  - backstage: fotos da galeria Backstage (cada uma se encaixa no seu formato)
+
+Fontes: o nome "Liora" aparece nos logos (já em TAN Pearl). Os títulos usam
+Cormorant Garamond (romano + itálico) e os textos usam Questrial, ambas do Google Fonts.
+
+Publicar: GitHub Pages ou Vercel (site estático, não precisa de build).
