@@ -85,8 +85,8 @@ p { margin: 0 0 1em; }
 /* ---------- Painéis arredondados (blocos tipo bento) ---------- */
 .painel { position: relative; margin: 12px; border-radius: var(--raio); overflow: hidden; isolation: isolate; }
 /* Seções azuis translúcidas: deixam o fundo creme-dourado aparecer por trás */
-.painel--azul { background: rgba(32, 59, 106, .8); color: var(--creme); backdrop-filter: blur(8px); }
-.painel--noite { background: rgba(20, 38, 74, .84); color: var(--creme); backdrop-filter: blur(8px); }
+.painel--azul { background: rgba(32, 59, 106, .8); color: var(--creme); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.painel--noite { background: rgba(20, 38, 74, .84); color: var(--creme); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 .painel--areia { background: var(--areia); color: var(--tinta); }
 
 /* Granulado fino, como nas fotos de referência */
@@ -120,7 +120,7 @@ p { margin: 0 0 1em; }
 /* O fundo desfocado fica num pseudo-elemento para não afetar o menu do celular */
 .topo__pilula::before {
   content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 999px;
-  background: rgba(32, 59, 106, .6); backdrop-filter: blur(18px) saturate(1.3); box-shadow: 0 10px 40px rgba(20, 38, 74, .2);
+  background: rgba(32, 59, 106, .6); -webkit-backdrop-filter: blur(18px) saturate(1.3); backdrop-filter: blur(18px) saturate(1.3); box-shadow: 0 10px 40px rgba(20, 38, 74, .2);
   border: 1px solid rgba(244, 240, 231, .22);
 }
 .topo__marca img { width: 84px; height: auto; }
@@ -150,7 +150,7 @@ p { margin: 0 0 1em; }
 @keyframes aproximar { from { scale: 1.12; opacity: .4; } to { scale: 1; opacity: 1; } }
 /* Véu azul: dá leitura ao texto e amarra a foto à identidade da Liora */
 .abertura__veu {
-  position: absolute; inset: 0; z-index: -2;
+  position: absolute; inset: 0; z-index: -2; border-radius: inherit;
   background:
     linear-gradient(180deg, rgba(20, 38, 74, .4) 0%, rgba(20, 38, 74, 0) 24%, rgba(20, 38, 74, 0) 50%, rgba(20, 38, 74, .82) 100%),
     linear-gradient(90deg, rgba(20, 38, 74, .38) 0%, rgba(20, 38, 74, 0) 55%);
@@ -180,8 +180,8 @@ p { margin: 0 0 1em; }
 .abertura__lado p::before { content: ""; position: absolute; right: 0; top: 0; width: 60px; height: 1px; background: var(--dourado-claro); }
 /* Aviso "deslize" (aparece só no celular e some depois que a pessoa arrasta a foto) */
 .abertura__dica {
-  display: none; position: absolute; right: 18px; top: 140px; z-index: 1; pointer-events: none;
-  padding: 6px 12px; border-radius: 999px; background: rgba(20, 38, 74, .45); backdrop-filter: blur(6px);
+  display: none; position: absolute; left: 50%; translate: -50% 0; top: 74px; z-index: 1; pointer-events: none;
+  padding: 6px 12px; border-radius: 999px; background: rgba(20, 38, 74, .45); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
   font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--creme); transition: opacity .6s;
 }
 .abertura__dica.sumir { opacity: 0; }
@@ -307,11 +307,12 @@ p { margin: 0 0 1em; }
    8. CONECTE-SE
    ===================================================== */
 .conecte { min-height: 90svh; display: grid; place-items: center; padding: 60px var(--pad-x); }
-.conecte__fundo { position: absolute; inset: 0; z-index: -3; backdrop-filter: blur(8px); background: radial-gradient(70% 60% at 50% 50%, rgba(56, 95, 131, .75), transparent 75%), linear-gradient(180deg, rgba(32, 59, 106, .8), rgba(20, 38, 74, .86)); }
+/* border-radius aqui também: no iPhone o desfoque ignorava os cantos arredondados do painel */
+.conecte__fundo { position: absolute; inset: 0; z-index: -3; border-radius: inherit; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); background: radial-gradient(70% 60% at 50% 50%, rgba(56, 95, 131, .75), transparent 75%), linear-gradient(180deg, rgba(32, 59, 106, .8), rgba(20, 38, 74, .86)); }
 .conecte__luz { position: absolute; left: 50%; top: 52%; z-index: -2; width: min(110vw, 900px); aspect-ratio: 1; translate: -50% -50%; background: radial-gradient(circle, rgba(236, 214, 160, .3), transparent 60%); animation: respirar 6s ease-in-out infinite; }
 .conecte__caixa {
   position: relative; z-index: 1; max-width: 660px; text-align: center; padding: clamp(36px, 6vw, 68px) clamp(24px, 5vw, 64px);
-  border-radius: 32px; background: rgba(243, 235, 220, .94); color: var(--tinta); backdrop-filter: blur(6px); box-shadow: 0 30px 80px rgba(10, 20, 45, .35);
+  border-radius: 32px; background: rgba(243, 235, 220, .94); color: var(--tinta); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); box-shadow: 0 30px 80px rgba(10, 20, 45, .35);
 }
 .conecte__caixa .selo { justify-content: center; }
 .conecte__caixa .titulo { margin-bottom: 1.2rem; }
@@ -390,7 +391,7 @@ p { margin: 0 0 1em; }
   .mosaico { grid-template-columns: repeat(2, 1fr); grid-auto-rows: clamp(110px, 33vw, 170px); grid-auto-flow: dense; gap: 10px; }
   .mosaico .foto:nth-child(n) { grid-column: auto; grid-row: span 2; }
   .mosaico .foto:nth-child(2), .mosaico .foto:nth-child(6) { grid-column: 1 / -1; }
-  .abertura__topo { font-size: .62rem; letter-spacing: .18em; right: 22px; }
+  .abertura__topo { font-size: .56rem; letter-spacing: .1em; right: 18px; white-space: nowrap; }
   .videos__trilho .video { flex-basis: min(68vw, 280px); }
   .galeria .foto__legenda { display: none; } /* fotos pequenas: legenda só ao ampliar */
   .visita { grid-template-columns: 1fr; }
@@ -433,8 +434,20 @@ p { margin: 0 0 1em; }
   .icone-social { width: 56px; height: 56px; }
   .icone-social svg { width: 24px; height: 24px; }
 
+  /* Rodapé: frase em cima (um pouco menor) e "voltar ao topo" embaixo */
+  .rodape__base { flex-direction: column-reverse; align-items: center; gap: 14px; }
+  .rodape__base small { font-size: .74rem; }
+
+  /* Foto ampliada um pouco menor, para não ficar por cima dos botões */
+  .lightbox figure { max-width: 70vw; }
+  .lightbox__imagem img { max-height: 66vh; }
+  .lightbox__imagem.girada { --h: min(66vh, calc(70vw / .5625)); }
+  .lightbox button { width: 44px; height: 44px; font-size: 1.6rem; }
+  .lightbox__nav--ant { left: 8px; }
+  .lightbox__nav--prox { right: 8px; }
+
   /* Capa: a foto horizontal pode ser arrastada para o lado */
-  .abertura__foto { inset: 0; translate: none; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .abertura__foto { inset: 0; translate: none; border-radius: inherit; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
   .abertura__foto::-webkit-scrollbar { display: none; }
   .abertura__foto img { width: auto; max-width: none; height: 100%; }
   .abertura__veu, .abertura .grao, .abertura__topo, .abertura__texto, .abertura__lado { pointer-events: none; }
