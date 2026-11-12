@@ -180,7 +180,7 @@ p { margin: 0 0 1em; }
 .abertura__lado p::before { content: ""; position: absolute; right: 0; top: 0; width: 60px; height: 1px; background: var(--dourado-claro); }
 /* Aviso "deslize" (aparece só no celular e some depois que a pessoa arrasta a foto) */
 .abertura__dica {
-  display: none; position: absolute; left: 50%; translate: -50% 0; top: 74px; z-index: 1; pointer-events: none;
+  display: none; position: absolute; right: 16px; top: 62px; z-index: 1; pointer-events: none;
   padding: 6px 12px; border-radius: 999px; background: rgba(20, 38, 74, .45); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
   font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--creme); transition: opacity .6s;
 }
@@ -391,7 +391,7 @@ p { margin: 0 0 1em; }
   .mosaico { grid-template-columns: repeat(2, 1fr); grid-auto-rows: clamp(110px, 33vw, 170px); grid-auto-flow: dense; gap: 10px; }
   .mosaico .foto:nth-child(n) { grid-column: auto; grid-row: span 2; }
   .mosaico .foto:nth-child(2), .mosaico .foto:nth-child(6) { grid-column: 1 / -1; }
-  .abertura__topo { font-size: .56rem; letter-spacing: .1em; right: 18px; white-space: nowrap; }
+  .abertura__topo { top: 94px; font-size: .56rem; letter-spacing: .1em; right: 18px; white-space: nowrap; }
   .videos__trilho .video { flex-basis: min(68vw, 280px); }
   .galeria .foto__legenda { display: none; } /* fotos pequenas: legenda só ao ampliar */
   .visita { grid-template-columns: 1fr; }
